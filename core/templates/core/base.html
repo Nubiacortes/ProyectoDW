@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title> Index </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+{% load static %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{% static 'core/estilo.css' %}">
+<script src=" {% static 'core/validar.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+<div id=menu>   
+    <h1> 
+    <div id=logo  style="color:white;">
+        <img src="https://img.icons8.com/pastel-glyph/64/000000/urban-sneakers.png">
+        <img src="https://img.icons8.com/pastel-glyph/64/000000/urban-sneakers.png">
+        <a id="Menu" class="texto" href="http://127.0.0.1:5500/" style="text-align:center;"> Inicio  </a>
+        <a id="Menu" class="texto" href="http://127.0.0.1:5500/" style="text-align:center;"> Quienes somos  </a>
+        <a id="Menu" class="texto" href="http://127.0.0.1:5500/novedades.html" style="text-align:center;"> Novedades  </a>        
+    </div>    
+
+    </h1>
+</div>
+
+
+
+</head>
+
+<body>
+    <div class="banner"></div>
+    <div class="sidebar-contact">
+        <div class="toggle" ></div>
+        <h2> Contactanos</h2>
+      
+    </div>    
+
+    <div class="content">
+
+    {% block contenido %}
+    
+    {% endblock contenido %}              
+
+    </div>
+     
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('.toggle').click(function(){
+            $('.sidebar-contact').toggleClass('active')
+        })
+    })
+    </script>   
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+      
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="{% static 'core/imagenes/carrusel1.jpg' %}" alt="Chania" width="1400" heigth="600"> 
+            <div class="carousel-caption">
+              <h3>Puma </h3>
+              <p>Nuevas RS-X Reinvention!</p>
+            </div>
+          </div>
+      
+          <div class="item">
+            <img src="{% static 'core/imagenes/carrusel2.jpg' %}" alt="Chicago" width="1400" heigth="600"> 
+            <div class="carousel-caption">
+              <h3>Adidas</h3>
+              <p>Nite Jogger combinan con todo!</p>
+            </div>
+          </div>
+      
+          <div class="item">
+            <img src="{% static 'core/imagenes/carrusel3.jpg' %}" alt="New York" width="1400" heigth="600"> 
+            <div class="carousel-caption">
+              <h3>Etnies</h3>
+              <p>Lo mejor dentro del mundo skateboarding</p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+
+</body>
+
+
+
+<!-- Footer ----------------------------------------->
+<footer class="page-footer font-small blue pt-4">
+
+        
+        <div class="container-fluid text-center text-md-left">
+      
+          
+          <div class="row">
+      
+           
+            <div class="col-md-6 mt-md-0 mt-3">
+      
+              <h5 class="text-uppercase">Blog zapatillas</h5>
+              <p>Here you can use rows and columns to organize your footer content.</p>
+              <img src="https://img.icons8.com/pastel-glyph/64/000000/urban-sneakers.png">
+            </div>
+           
+            <hr class="clearfix w-100 d-md-none pb-3">
+        
+            <div class="col-md-3 mb-md-0 mb-3">
+      
+              <!-- Links -->
+              <h5 class="text-uppercase">MISCELLANEOUS</h5>
+      
+              <ul class="list-unstyled">
+                <li>
+                  <a href="https://www.mozilla.org/es-ES/about/legal/terms/mozilla/"> Terms and conditions</a>
+                </li>
+                <li>
+                  <a href="https://www.mozilla.org/es-ES/privacy/websites/">Privacy </a>
+                </li>
+                <li>
+                  <a href="#!">FAQ</a>
+                </li>
+              </ul>
+      
+            </div>
+            <!-- Grid column -->
+      
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+      
+              <!-- Links -->
+              <h5 class="text-uppercase">Redes Sociales</h5>
+      
+              <div id=redes>   
+    
+    <p style="text-align: center;" centerwidth="800" class="center" > 
+        
+        <a id="MenuRes" href="http://facebook.com"><img class="face" src="{% static 'core/imagenes/red1.png' %}" width="70" heigth="70"/></a>
+        <a id="MenuRes" href="http://google.com"><img class="face" src="{% static 'core/imagenes/red2.png' %}"width="70" heigth="70"/></a>    
+  
+        <a id="MenuRes" href="http://instagram.com"><img class="face" src="{% static 'core/imagenes/red3.png' %}"width="70" heigth="70"/></a>
+        <a id="MenuRes" href="http://gmail.com"><img class="face" src="{% static 'core/imagenes/red4.png' %}" width="70" heigth="70"/></a>
+    </p>    
+
+</div>
+            </div>
+            <!-- Grid column -->
+      
+          </div>
+          <!-- Grid row -->
+      
+        </div>
+        <!-- Footer Links -->
+      
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3"> © 2019 Copyright
+        </div>
+        <!-- Copyright -->
+      
+      </footer>
+      <!-- Footer -->
+      
+</html>

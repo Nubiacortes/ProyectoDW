@@ -1,0 +1,75 @@
+{% extends 'core/base.html' %}
+
+{% block contenido %}
+
+
+<div id=menu>   
+    <h1>
+    <div id=logo style="color:white;">
+        <img src="https://img.icons8.com/pastel-glyph/64/000000/urban-sneakers.png">
+        <img src="https://img.icons8.com/pastel-glyph/64/000000/urban-sneakers.png">
+        <a id="Menu" class="texto" href="http://127.0.0.1:5500/" style="text-align:center;"> Inicio  </a>
+        <a id="Menu" class="texto" href="http://127.0.0.1:5500/" style="text-align:center;"> Quienes somos  </a>     
+    </div>    
+
+    </h1>
+</div>
+</head>
+
+<body>
+        <div class="container">
+  <h2>Lanzamientos mas recientes</h2>
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading"> Revisa en detalle cada uno de los modelos </div>
+      <div class="panel-body">
+            <div class="video">
+                    <a target="_blank" href="">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/_sIaPgpM2v0" frameborder="0" 
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </a>
+                    <div class="desc"> Adidas  |   Feel the Boost</div>
+                  </div>
+                  
+                  <div class="video">
+                    <a target="_blank" href="">
+                            <iframe style="margin-left: 350px" width="560" height="315" center src="https://www.youtube.com/embed/FiSMSVCrZUI" frameborder="0" 
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </a>
+                    <div class="desc"> Reebok  |   Zig Kinetica Concept </div>
+                  </div>
+                  
+                 
+
+
+      </div>
+    </div>
+
+  </div>
+  <h2>Modelos mejor evaluados</h2>
+  <div class="row">
+     
+    <div class="column">
+      <img src="imagenes/zapatillas1.jpg">
+      <img src="imagenes/zapatillas2.jpg">
+      <img src="imagenes/zapatillas3.jpg">
+      <img src="imagenes/zapatillas5.jpg">
+      <img src="imagenes/zapatillas6.jpg">
+    </div>
+    <div class="column">
+      <img src="imagenes/zapatillas5.jpg">
+      <img src="imagenes/zapatillas4.jpg">
+      <img src="imagenes/zapatillas2.jpg">
+      <img src="imagenes/zapatillas3.jpg">
+      <img src="imagenes/zapatillas1.jpg">
+    </div>
+    <div class="column">
+      <img src="imagenes/zapatillas1.jpg">
+      <img src="imagenes/zapatillas2.jpg">
+      <img src="imagenes/zapatillas3.jpg">
+      <img src="imagenes/zapatillas5.jpg">
+      <img src="imagenes/zapatillas6.jpg">
+    </div>
+  </div>
+
+{% endblock contenido %}
