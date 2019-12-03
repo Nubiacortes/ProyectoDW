@@ -45,6 +45,9 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.provide.google',
 
+#  modo offline para la  website-----
+    'pwa',
+
 ]
 
 MIDDLEWARE = [
