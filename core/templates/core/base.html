@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
+{% load pwa %}
+{% load static %}
+{% load socialaccount %} 
 <head>
 <title> Index </title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-{% load static %}
+
+{% progressive_web_app_meta %}
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -31,6 +35,9 @@
 
 
 </head>
+<p> 
+<a href="{% provider_login_url "google" %}" > Registrate con Google  </a>
+</p>
 
 <body>
     <div class="banner"></div>
@@ -182,5 +189,9 @@
       
       </footer>
       <!-- Footer -->
+
+
       
 </html>
+
+

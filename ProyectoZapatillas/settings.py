@@ -38,16 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social.apps.django_app.default',
     'core',
 # django para usar login con google ----------
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.provide.google',
-
 #  modo offline para la  website-----
     'pwa',
-
 ]
 
 MIDDLEWARE = [
@@ -132,16 +131,29 @@ STATIC_URL = '/static/'
 
 
 
-#Django allauth settings--------para google login---------------
+#Django allauth settings--------para google,face y twitter login---------------
 
 AUTHENTICATION_BACKENDS = (
-
     #Needed to login by username in Django admin, regardless of "allauth"
-      'django.contrib.auth.backends.ModelBackend',
-
-
+    'django.contrib.auth.backends.ModelBackend',
     # "allauth" specific authentication methos, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
+
+    'social.backends.facebook.FacebookAppOAuth2 ' ,
+    'social.backends.facebook.FacebookOAuth2 ' ,
+    'social.backends.twitter.TwitterOAuth2  ' ,
+      
 )
 
 SITE_ID = 1
+LOGIN_REDIRECT_URL = '/'
+
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
+SOCIAL_AUTH_TWITTER_KEY = ' '
+SOCIAL_AUTH_TWITTER_SECRET= ' '
+
+SOCIAL_AUTH_FACEBOOK_KEY = ' '
+SOCIAL_AUTH_FACEBOOK_SECRET= ' '
+
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'core/static/core', 'serviceworker.js')
+                
